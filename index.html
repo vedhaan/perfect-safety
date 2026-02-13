@@ -607,254 +607,627 @@
 	</div>
 
 
-	<section class="ps-gallery" id="ps-gallery">
-  <div class="ps-header">
-    <h2 class="ps-title">Safety in focus</h2>
-    <p class="ps-subtitle">Precision equipment, proven protection, zero compromise</p>
-  </div>
+<section class="ps-showcase">
+  <div class="ps-container">
+    <!-- Header -->
+    <div class="ps-header">
+      <h2 class="ps-title">Safety in motion</h2>
+      <p class="ps-subtitle">Regulatory-grade protection, verified in real-world conditions.</p>
+    </div>
 
-  <div class="ps-slider-container">
-    <div class="ps-slider-track" id="psSliderTrack">
-      <div class="ps-slide"><img src="img/image1.jpeg" alt="Industrial safety equipment" loading="lazy"></div>
-      <div class="ps-slide"><img src="img/image2.jpeg" alt="Safety inspection" loading="lazy"></div>
-      <div class="ps-slide"><img src="img/image3.jpeg" alt="Worker with protective gear" loading="lazy"></div>
-    </div>
-    <button class="ps-slider-arrow ps-prev" aria-label="Previous slide">←</button>
-    <button class="ps-slider-arrow ps-next" aria-label="Next slide">→</button>
-  </div>
+    <!-- Featured Media Slider -->
+    <div class="ps-slider-container" role="region" aria-label="Media showcase" aria-roledescription="carousel">
+      <div class="ps-slider-viewport">
+        <div class="ps-slider-track" id="ps-slider-track" aria-live="polite">
+          <!-- Slide 1 (Image) -->
+          <div class="ps-slide" role="group" aria-label="1 of 4" aria-roledescription="slide">
+            <img src="img/videos/WhatsApp Image 2026-02-13 at 11.48.16 AM.jpeg" alt="Safety inspection on industrial floor" class="ps-slide-media" loading="lazy">
+          </div>
+          <!-- Slide 2 (Video) -->
+          <div class="ps-slide" role="group" aria-label="2 of 4" aria-roledescription="slide">
+            <video class="ps-slide-media" poster="img/videos/video1outer.png" preload="none" muted playsinline>
+              <source src="img/videos/folder1/28.mp4" type="video/mp4">
+            </video>
+            <div class="ps-video-controls">
+              <button class="ps-video-play" aria-label="Play video">▶</button>
+              <button class="ps-video-mute" aria-label="Mute video">🔊</button>
+            </div>
+          </div>
+          <!-- Slide 3 (Image) -->
+          <div class="ps-slide" role="group" aria-label="3 of 4" aria-roledescription="slide">
+            <img src="img/videos/folder2/WhatsApp Image 2026-02-13 at 11.48.15 AM (1).jpeg" alt="Worker with safety harness" class="ps-slide-media" loading="lazy">
+          </div>
+          <!-- Slide 4 (Image) -->
+          <div class="ps-slide" role="group" aria-label="2 of 4" aria-roledescription="slide">
+            <video class="ps-slide-media" poster="img/videos/video2outer.png" preload="none" muted playsinline>
+              <source src="img/videos/folder1/31.mp4" type="video/mp4">
+            </video>
+            <div class="ps-video-controls">
+              <button class="ps-video-play" aria-label="Play video">▶</button>
+              <button class="ps-video-mute" aria-label="Mute video">🔊</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="ps-card-grid">
-    <div class="ps-card">
-      <div class="ps-card-img"><img src="https://images.pexels.com/photos/7241385/pexels-photo-7241385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hard hat and gloves" loading="lazy"></div>
-      <div class="ps-card-caption">Certified head protection</div>
+      <!-- Navigation Arrows -->
+      <button class="ps-slider-arrow ps-arrow-prev" aria-label="Previous slide" aria-controls="ps-slider-track">←</button>
+      <button class="ps-slider-arrow ps-arrow-next" aria-label="Next slide" aria-controls="ps-slider-track">→</button>
+
+      <!-- Dot Indicators -->
+      <div class="ps-slider-dots" role="tablist" aria-label="Slider navigation">
+        <button class="ps-dot active" role="tab" aria-label="Slide 1" aria-selected="true" aria-controls="ps-slider-track"></button>
+        <button class="ps-dot" role="tab" aria-label="Slide 2" aria-selected="false" aria-controls="ps-slider-track"></button>
+        <button class="ps-dot" role="tab" aria-label="Slide 3" aria-selected="false" aria-controls="ps-slider-track"></button>
+        <button class="ps-dot" role="tab" aria-label="Slide 4" aria-selected="false" aria-controls="ps-slider-track"></button>
+      </div>
     </div>
-    <div class="ps-card">
-      <div class="ps-card-img"><img src="https://images.pexels.com/photos/7241695/pexels-photo-7241695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Safety harness" loading="lazy"></div>
-      <div class="ps-card-caption">Fall arrest systems</div>
-    </div>
-    <div class="ps-card">
-      <div class="ps-card-img"><img src="https://images.pexels.com/photos/7241473/pexels-photo-7241473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Industrial eyewear" loading="lazy"></div>
-      <div class="ps-card-caption">Impact resistant eyewear</div>
+
+    <!-- Gallery Cards -->
+    <div class="ps-gallery">
+      <div class="ps-card">
+        <img src="img/videos/folder1/13.jpeg" alt="Fall protection equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/14.jpeg" alt="Gas detection devices" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/15.jpeg" alt="Confined space equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/16.jpeg" alt="PPE inventory" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/1.jpeg" alt="Fall protection equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/2.jpeg" alt="Gas detection devices" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/3.jpeg" alt="Confined space equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/4.jpeg" alt="PPE inventory" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/5.jpeg" alt="Fall protection equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/6.jpeg" alt="Gas detection devices" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/7.jpeg" alt="Confined space equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/9.jpeg" alt="PPE inventory" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder2/1.jpeg" alt="Fall protection equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder1/23.jpeg" alt="Gas detection devices" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/folder2/3.jpeg" alt="Confined space equipment" class="ps-card-image" loading="lazy">
+      </div>
+      <div class="ps-card">
+        <img src="img/videos/WhatsApp Image 2026-02-13 at 11.48.16 AM.jpeg" alt="PPE inventory" class="ps-card-image" loading="lazy">
+      </div>
     </div>
   </div>
 
   <style>
-    .ps-gallery {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem;
-      background: #FFFFFF;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      color: #1E1E1E;
+    /* RESET / BASE */
+    .ps-showcase * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    .ps-showcase {
+      display: block;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #ffffff;
+      color: #1E1E1E;
+      line-height: 1.5;
+    }
+
+    .ps-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 48px 16px;
+    }
+
+    /* TYPOGRAPHY + SPACING (8px rhythm) */
     .ps-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 40px;
     }
 
     .ps-title {
-      font-size: 2rem;
+		text-align: center;
+      font-size: 2.25rem;
       font-weight: 600;
-      letter-spacing: -0.01em;
-      margin: 0 0 0.5rem 0;
-      color: #1E1E1E;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #dc3545;
     }
 
     .ps-subtitle {
-      font-size: 1.125rem;
-      color: #4a4a4a;
-      margin: 0;
-      font-weight: 400;
+		text-align: center;
+      font-size: 1.25rem;
+      color: #00b67a;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
+    /* SLIDER */
     .ps-slider-container {
       position: relative;
-      margin-bottom: 2rem;
+      margin-bottom: 48px;
       border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-      border: 1px solid #eaeaea;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .ps-slider-viewport {
+      overflow: hidden;
+      background: #f8f8f8;
     }
 
     .ps-slider-track {
       display: flex;
-      transition: transform 700ms cubic-bezier(0.2, 0.9, 0.3, 1);
-      aspect-ratio: 16 / 9;
+      transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
+      will-change: transform;
     }
 
     .ps-slide {
       flex: 0 0 100%;
-      width: 100%;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #e6e6e6;
     }
 
-    .ps-slide img {
+    .ps-slide-media {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .ps-slider-arrow {
+    video.ps-slide-media {
+      background: #000;
+    }
+
+    /* Video controls overlay */
+    .ps-video-controls {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.9);
-      border: 1px solid #e0e0e0;
-      width: 44px;
-      height: 44px;
-      border-radius: 6px;
-      font-size: 1.5rem;
-      font-weight: 300;
-      color: #1E1E1E;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      background: rgba(0,0,0,0.6);
+      padding: 6px;
+      border-radius: 40px;
+      backdrop-filter: none;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .ps-slide:hover .ps-video-controls,
+    .ps-slide:focus-within .ps-video-controls {
+      opacity: 1;
+    }
+
+    .ps-video-controls button {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: #E31B23;
+      color: white;
+      font-size: 16px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      transition: background 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    .ps-slider-arrow:hover {
-      background: #FFFFFF;
+    .ps-video-controls button:hover,
+    .ps-video-controls button:focus-visible {
+      background: #b0121a;
+      outline: 2px solid #ffffff;
+    }
+
+    .ps-video-controls button:focus-visible {
+      outline: 2px solid #E31B23;
+      outline-offset: 2px;
+    }
+
+    /* Slider arrows */
+    .ps-slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      background: white;
+      border: 1px solid #E6E6E6;
+      border-radius: 6px;
+      font-size: 24px;
+      color: #1E1E1E;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: all 0.2s;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ps-slider-arrow:hover:not(:disabled) {
+      background: #f0f0f0;
       border-color: #E31B23;
       color: #E31B23;
     }
 
-    .ps-prev {
-      left: 16px;
+    .ps-slider-arrow:focus-visible {
+      outline: 2px solid #E31B23;
+      outline-offset: 2px;
     }
 
-    .ps-next {
-      right: 16px;
+    .ps-slider-arrow:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
     }
 
-    .ps-card-grid {
+    .ps-arrow-prev { left: 16px; }
+    .ps-arrow-next { right: 16px; }
+
+    /* Dots */
+    .ps-slider-dots {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .ps-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255,255,255,0.6);
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.2s;
+    }
+
+    .ps-dot.active {
+      background: #E31B23;
+      width: 24px;
+    }
+
+    .ps-dot:focus-visible {
+      outline: 2px solid #E31B23;
+      outline-offset: 2px;
+    }
+
+    /* GALLERY CARDS (scroll reveal) */
+    .ps-gallery {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      margin: 2.5rem 0;
-    }
-
-    @media (min-width: 640px) {
-      .ps-card-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
     }
 
     .ps-card {
-      border: 1px solid #ececec;
-      border-radius: 6px;
+      background: white;
+      border: 1px solid #E6E6E6;
+      border-radius: 15px;
       overflow: hidden;
-      background: #FFFFFF;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       opacity: 0;
       transform: translateY(40px) scale(0.96);
-      transition: opacity 700ms cubic-bezier(0.2, 0.9, 0.3, 1), transform 700ms cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.2s;
+      animation: ps-card-reveal 0.7s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
     }
 
-    .ps-card.ps-visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    .ps-card:nth-child(1) { animation-delay: 0s; }
+    .ps-card:nth-child(2) { animation-delay: 0.12s; }
+    .ps-card:nth-child(3) { animation-delay: 0.24s; }
+    .ps-card:nth-child(4) { animation-delay: 0.36s; }
+
+    @keyframes ps-card-reveal {
+      0% { opacity: 0; transform: translateY(40px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .ps-card:hover {
-      border-color: #E31B23;
-      box-shadow: 0 8px 18px rgba(227, 27, 35, 0.06);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
     }
 
-    .ps-card-img {
-      overflow: hidden;
+    .ps-card-image {
+      width: 100%;
       aspect-ratio: 4 / 3;
-      border-bottom: 1px solid #f0f0f0;
+      object-fit: cover;
+      display: block;
     }
 
-    .ps-card-img img {
+    .ps-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 16px 16px 4px;
+      color: #1E1E1E;
+    }
+
+    .ps-card-text {
+      margin: 0 16px 16px;
+      color: #4a4a4a;
+      font-size: 0.9375rem;
+    }
+
+    /* TEAM BLOCK */
+    .ps-team {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid #E6E6E6;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      margin-bottom: 48px;
+    }
+
+    .ps-team-image {
+      flex: 1 1 60%;
+      background: #f0f0f0;
+    }
+
+    .ps-team-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 700ms cubic-bezier(0.2, 0.9, 0.3, 1);
+      aspect-ratio: 16 / 9;
     }
 
-    .ps-card:hover .ps-card-img img {
-      transform: scale(1.04);
+    .ps-team-content {
+      flex: 1 1 40%;
+      padding: 32px;
     }
 
-    .ps-card-caption {
-      padding: 1rem;
-      font-size: 0.9375rem;
-      font-weight: 500;
+    .ps-team-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 12px;
       color: #1E1E1E;
-      background: white;
-      border-top: 2px solid transparent;
-      transition: border-color 0.2s;
     }
 
-    .ps-card:hover .ps-card-caption {
-      border-top-color: #E31B23;
+    .ps-team-accent {
+      width: 60px;
+      height: 3px;
+      background: #E31B23;
+      margin-bottom: 20px;
     }
 
+    .ps-team-text {
+      font-size: 1rem;
+      color: #2c2c2c;
+      max-width: 500px;
+    }
+
+    /* CTA */
     .ps-cta {
       text-align: center;
     }
 
     .ps-button {
-      display: inline-block;
       background: #E31B23;
       color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.875rem 2.5rem;
+      border: none;
+      padding: 14px 36px;
+      font-size: 1.125rem;
+      font-weight: 500;
       border-radius: 6px;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      border: 1px solid #E31B23;
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 6px rgba(227, 27, 35, 0.2);
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(227, 27, 35, 0.2);
+      transition: background 0.2s, transform 0.1s;
+      border: 1px solid transparent;
     }
 
     .ps-button:hover {
       background: #b0121a;
-      border-color: #b0121a;
-      box-shadow: 0 4px 12px rgba(227, 27, 35, 0.25);
+    }
+
+    .ps-button:focus-visible {
+      outline: 2px solid #E31B23;
+      outline-offset: 2px;
+    }
+
+    .ps-button:active {
+      transform: scale(0.98);
+    }
+
+    /* DESKTOP TEAM */
+    @media (min-width: 768px) {
+      .ps-team {
+        flex-direction: row;
+      }
+      .ps-team-image {
+        aspect-ratio: auto;
+      }
+      .ps-team-image img {
+        aspect-ratio: auto;
+        height: 100%;
+      }
+    }
+
+    /* FOCUS VISIBILITY (global) */
+    :focus-visible {
+      outline: 2px solid #E31B23;
+      outline-offset: 2px;
+    }
+
+    /* keybaord nav */
+    .ps-slider-arrow:focus-visible,
+    .ps-dot:focus-visible,
+    .ps-video-controls button:focus-visible,
+    .ps-button:focus-visible {
+      outline: 2px solid #E31B23;
+      outline-offset: 2px;
+    }
+
+    /* disable hover effects when using keyboard */
+    .js-focus-visible :focus:not(.focus-visible) {
+      outline: none;
     }
   </style>
 
   <script>
-    (function(){
-      const track = document.getElementById('psSliderTrack');
-      const slides = track.children;
-      const prevBtn = document.querySelector('.ps-prev');
-      const nextBtn = document.querySelector('.ps-next');
+    (function() {
+      // Slider logic with keyboard, pause video on slide change
+      const track = document.getElementById('ps-slider-track');
+      const slides = Array.from(document.querySelectorAll('.ps-slide'));
+      const prevBtn = document.querySelector('.ps-arrow-prev');
+      const nextBtn = document.querySelector('.ps-arrow-next');
+      const dots = document.querySelectorAll('.ps-dot');
+      const slideCount = slides.length;
       let currentIndex = 0;
+      let startX, isDragging = false;
 
-      function updateSlide() {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      if (!track) return;
+
+      function getActiveVideo() {
+        const activeSlide = slides[currentIndex];
+        return activeSlide ? activeSlide.querySelector('video') : null;
       }
 
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlide();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlide();
-      });
-
-      const cards = document.querySelectorAll('.ps-card');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('ps-visible');
+      function pauseAllVideos() {
+        slides.forEach(slide => {
+          const video = slide.querySelector('video');
+          if (video && !video.paused) {
+            video.pause();
+            const playBtn = slide.querySelector('.ps-video-play');
+            if (playBtn) playBtn.textContent = '▶';
           }
         });
-      }, { threshold: 0.2, rootMargin: '20px' });
+      }
 
-      cards.forEach(card => observer.observe(card));
+      function updateSlider(instant = false) {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+          dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+        });
+        // Update arrow disabled states
+        if (prevBtn) prevBtn.disabled = currentIndex === 0;
+        if (nextBtn) nextBtn.disabled = currentIndex === slideCount - 1;
+
+        // Pause any playing video
+        pauseAllVideos();
+
+        // Update video control button states (mute/unmute based on video.muted)
+        const activeVideo = getActiveVideo();
+        if (activeVideo) {
+          const muteBtn = slides[currentIndex].querySelector('.ps-video-mute');
+          if (muteBtn) {
+            muteBtn.textContent = activeVideo.muted ? '🔇' : '🔊';
+          }
+        }
+      }
+
+      function goToSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= slideCount) index = slideCount - 1;
+        if (index === currentIndex) return;
+        currentIndex = index;
+        updateSlider();
+      }
+
+      // Event listeners
+      if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goToSlide(i));
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goToSlide(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          goToSlide(currentIndex + 1);
+        } else if (e.key === 'Escape') {
+          const activeVideo = getActiveVideo();
+          if (activeVideo && !activeVideo.paused) {
+            activeVideo.pause();
+          }
+        }
+      });
+
+      // Video controls (custom play/pause + mute)
+      document.querySelectorAll('.ps-video-play').forEach((btn, idx) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const slide = btn.closest('.ps-slide');
+          const video = slide.querySelector('video');
+          if (!video) return;
+          if (video.paused) {
+            video.play();
+            btn.textContent = '⏸';
+          } else {
+            video.pause();
+            btn.textContent = '▶';
+          }
+        });
+      });
+
+      document.querySelectorAll('.ps-video-mute').forEach((btn, idx) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const slide = btn.closest('.ps-slide');
+          const video = slide.querySelector('video');
+          if (!video) return;
+          video.muted = !video.muted;
+          btn.textContent = video.muted ? '🔇' : '🔊';
+        });
+      });
+
+      // Pause video on slide change (already handled in updateSlider)
+
+      // Touch drag (minimal, just for UX)
+      track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      }, { passive: true });
+
+      track.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) goToSlide(currentIndex + 1);
+          else goToSlide(currentIndex - 1);
+        }
+        isDragging = false;
+      }, { passive: true });
+
+      // Lazy loading is handled by HTML attribute
+      // Initial update
+      updateSlider(true);
+
+      // Add extra listener to pause video when slide changes due to any interaction
+      // Already in goToSlide -> pauseAllVideos
     })();
   </script>
 </section>
