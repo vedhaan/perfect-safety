@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)file:///C:/FINAL_INTERNSHIP/fire.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agniraksha Fire Services</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #ffffff;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 100px;
+      width: 150px;
+    }
+
+    .navbar a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #f58652;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ff3c00;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      position: relative;
+      height: 110vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://media.istockphoto.com/id/1256061373/photo/firefighters-spraying-down-fire-flame-from-oil-tanker-truck-accident.jpg?s=612x612&w=0&k=20&c=8C_W2L5R6FIvuSe2t99D2v2L27Xxm3FywFTtVnIoHqs=');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #ff3c00;
+    }
+
+    .hero p {
+      margin: 15px 0 25px;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff3c00, #ffae00);
+      border: none;
+      padding: 12px 25px;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Section Common ===== */
+    section {
+      padding: 70px 40px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #ff3c00;
+    }
+
+    /* ===== About ===== */
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* ===== Products ===== */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #141414;
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+      border: 1px solid #222;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #ff3c00;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #ffae00;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    #contact {
+  padding: 60px 20px;
+  background: black ;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 32px;
+  color: #ff3c00;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Info card */
+.contact-info {
+  background:  linear-gradient(45deg, #ff3c00, #ffae00);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.call-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #282727;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Form */
+.contact-form {
+  background: linear-gradient(45deg, #ff3c00, #ffae00);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background: #1e1e1d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+    /* ===== Footer ===== */
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      color: #fac800;
+      font-size: 14px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      .navbar {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="logo">
+      <img src="./Agniraksha Fire Services_files/Fire logo.png" alt="Agniraksha Logo">
+    </div>
+    <nav class="navbar">
+      <a href="file:///C:/FINAL_INTERNSHIP/fire.html#home">Home</a>
+      <a href="file:///C:/FINAL_INTERNSHIP/fire.html#about">About</a>
+      <a href="file:///C:/FINAL_INTERNSHIP/fire.html#products">Products</a>
+      <a href="file:///C:/FINAL_INTERNSHIP/fire.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  
+  <section class="hero" id="home">
+    <div>
+      <h1>Agniraksha Fire Services</h1>
+      <p>Your Safety is Our Highest Priority</p>
+      <button class="btn">Explore Services</button>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Agniraksha Fire Services provides complete fire safety solutions including
+      fire protection systems, emergency rescue support, and high‑quality fire
+      safety equipment. Our mission is to protect lives, property, and the
+      environment with fast response and trusted service.
+    </p>
+  </section>
+
+  <!-- ===== Products ===== -->
+  <section id="products">
+    <h2>Fire Safety Products</h2>
+
+    <div class="products">
+      <div class="card">
+        <img src="./Agniraksha Fire Services_files/f1.jpg">
+        <h3>Fire Extinguisher</h3>
+        <p>High‑quality extinguishers suitable for homes, offices, and industries.</p>
+      </div>
+
+      <div class="card">
+        <img src="./Agniraksha Fire Services_files/f2.webp">
+        <h3>Fire Alarm System</h3>
+        <p>Advanced alarm systems for early fire detection and quick response.</p>
+      </div>
+
+      <div class="card">
+        <img src="./Agniraksha Fire Services_files/f3.jpg">
+        <h3>Fire Hose Reel</h3>
+        <p>Durable hose reels designed for efficient firefighting operations.</p>
+      </div>
+
+      <div class="card">
+        <img src="./Agniraksha Fire Services_files/f4.jpg">
+        <h3>Safety Equipment</h3>
+        <p>Helmets, gloves, and protective gear ensuring maximum firefighter safety.</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>We are available 24/7 for fire safety support and emergency services.</p>
+
+      <p><strong>📍 Address:</strong> Bhavnagar, Gujarat, India</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>✉ Email:</strong> info@agniraksha.com</p>
+      <p><strong>🕒 Hours:</strong> 24/7 Emergency Support</p>
+
+      <a href="tel:+919876543210" class="call-btn">Call Emergency</a>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <h3>Send Message</h3>
+
+      <input type="text" placeholder="Your Name" required="">
+      <input type="email" placeholder="Your Email" required="">
+      <input type="tel" placeholder="Phone Number">
+      <textarea rows="4" placeholder="Your Message" required=""></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2026 Agniraksha Fire Services. All rights reserved.
+  </footer>
+
+
+</body></html>
