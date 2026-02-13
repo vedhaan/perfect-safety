@@ -8438,6 +8438,51 @@ h1, h2, h3, h4, h5,
       font-weight: 600;
       color: #fc5e28; }
 
+
+      @media (max-width: 768px) {
+
+  /* Reduce outer spacing */
+  .pt-3.pb-3 {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
+  /* Reduce row spacing */
+  .row.d-flex {
+    row-gap: 4px;
+  }
+
+  /* Remove unnecessary margins */
+  .topper {
+    margin-bottom: 4px !important;
+  }
+
+  .topper .con,
+  .topper .hr {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  /* Reduce icon size */
+  .topper .icon {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+
+  /* Reduce logo size slightly */
+  .brand-logo {
+    height: 32px;
+  }
+
+  .brand-text {
+    font-size: 15px;
+  }
+
+}
+
+
 .ftco-navbar-light {
   background: transparent !important;
   position: absolute;
