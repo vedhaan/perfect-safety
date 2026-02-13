@@ -973,6 +973,22 @@
       font-size: 0.9375rem;
     }
 
+	/* Force 2 columns on mobile */
+@media (max-width: 576px) {
+  .ps-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px; /* tighter spacing for small screens */
+  }
+
+  .ps-card-title {
+    font-size: 1rem;
+  }
+
+  .ps-card-text {
+    font-size: 0.85rem;
+  }
+}
+
     /* TEAM BLOCK */
     .ps-team {
       display: flex;
