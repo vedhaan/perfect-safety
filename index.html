@@ -936,6 +936,7 @@
       opacity: 0;
       transform: translateY(40px) scale(0.96);
       animation: ps-card-reveal 0.7s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+	   min-width: 0;
     }
 
     .ps-card:nth-child(1) { animation-delay: 0s; }
@@ -976,18 +977,11 @@
 	/* Force 2 columns on mobile */
 @media (max-width: 576px) {
   .ps-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px; /* tighter spacing for small screens */
-  }
-
-  .ps-card-title {
-    font-size: 1rem;
-  }
-
-  .ps-card-text {
-    font-size: 0.85rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 }
+
 
     /* TEAM BLOCK */
     .ps-team {
