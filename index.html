@@ -33,7 +33,8 @@
 			<div class="nav-left">
 				<a href="index.html" class="brand-wrap">
 					<img src="img/partners/logo.png" alt="Perfect Safety Logo" class="brand-logo">
-					<span class="brand-name"><span style="color: #E31B23;">PERFECT</span> <span style="color: #1f8f4e;">SAFETY</span></span>
+					<span class="brand-name"><span style="color: #E31B23;">PERFECT</span> <span
+							style="color: #1f8f4e;">SAFETY</span></span>
 				</a>
 			</div>
 
@@ -171,7 +172,7 @@
 		.nav-cta {
 			display: none;
 		}
-		
+
 
 		.cta-wa {
 			display: inline-flex;
@@ -215,14 +216,15 @@
 			transform: translateY(0);
 			box-shadow: none;
 		}
+
 		@media (max-width: 1024px) {
-    .cta-wa {
-        padding: 12px 18px;
-        font-size: 15px;
-        width: 100%;
-        justify-content: center;
-    }
-}
+			.cta-wa {
+				padding: 12px 18px;
+				font-size: 15px;
+				width: 100%;
+				justify-content: center;
+			}
+		}
 
 		/* hamburger (mobile only) */
 		.hamburger {
@@ -2339,31 +2341,24 @@
 					once: true,
 					duration: 600,
 					easing: 'ease-out-cubic',
-					offset: 60,  // but we keep mobile-first, just no AOS on very small if heavy
+					offset: 60,
 				});
 
-				// ---------- FORM & TOAST ELEMENTS ----------
+				// ---------- FORM ELEMENTS ----------
 				const form = document.getElementById('ps-contactForm');
 				const submitBtn = document.getElementById('ps-submitBtn');
-
-				// Formspree endpoint (AJAX).
-				const FORMSPREE_URL = 'https://formspree.io/f/mykdkjal';
 
 				// ---------- TOAST ----------
 				const toastEl = document.getElementById('ps-toast');
 				const toastMsg = document.getElementById('ps-toast-message');
 				const toastIcon = document.getElementById('ps-toast-icon');
-				let toastTimeout, progressInterval, progressWidth = 100;
+				let toastTimeout;
 
 				function showToast(message, type = 'success') {
-					// clear previous timeouts
 					if (toastTimeout) clearTimeout(toastTimeout);
-					if (progressInterval) clearInterval(progressInterval);
 
-					// reset
 					toastEl.classList.remove('ps-toast-success', 'ps-toast-error', 'ps-toast-visible');
 
-					// set type
 					if (type === 'success') {
 						toastEl.classList.add('ps-toast-success');
 						toastIcon.className = 'bx bxs-check-circle';
@@ -2375,38 +2370,26 @@
 					toastMsg.textContent = message;
 					toastEl.classList.add('ps-toast-visible');
 
-					// progress bar animation
-					const progressBar = toastEl.querySelector('.ps-toast-progress');
-					progressBar.style.transition = 'none';
-					progressBar.style.width = '100%';
-					progressWidth = 100;
-
-					setTimeout(() => {
-						progressBar.style.transition = 'width 4s linear';
-						progressBar.style.width = '0%';
-					}, 20);
-
-					// auto hide 4s
 					toastTimeout = setTimeout(() => {
 						toastEl.classList.remove('ps-toast-visible');
-					}, 4000);
+					}, 3500);
 				}
 
-				// ---------- CLIENT-SIDE VALIDATION ----------
+				// ---------- VALIDATION ----------
 				function validateEmail(email) {
 					const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 					return re.test(email);
 				}
 
 				function validatePhone(phone) {
-					const re = /^\d{10}$/;  // 10-digit only
+					const re = /^\d{10}$/;
 					return re.test(phone);
 				}
 
 				function clearFieldError(fieldId) {
 					const errSpan = document.getElementById(`error-${fieldId}`);
-					if (errSpan) errSpan.textContent = '';
 					const input = document.getElementById(fieldId);
+					if (errSpan) errSpan.textContent = '';
 					if (input) input.classList.remove('ps-input-error');
 				}
 
@@ -2417,14 +2400,12 @@
 					if (input) input.classList.add('ps-input-error');
 				}
 
-				// ---------- AJAX SUBMIT w/ HONEYPOT ----------
-				async function handleFormSubmit(e) {
+				// ---------- SUBMIT HANDLER ----------
+				function handleFormSubmit(e) {
 					e.preventDefault();
 
-					// Reset all error displays
 					['fullname', 'email', 'phone', 'message'].forEach(id => clearFieldError(id));
 
-					// get values
 					const fullname = document.getElementById('fullname').value.trim();
 					const email = document.getElementById('email').value.trim();
 					const phone = document.getElementById('phone').value.trim();
@@ -2433,7 +2414,6 @@
 
 					let isValid = true;
 
-					// validation
 					if (!fullname) {
 						showFieldError('fullname', 'Full name is required');
 						isValid = false;
@@ -2443,7 +2423,7 @@
 						showFieldError('email', 'Email is required');
 						isValid = false;
 					} else if (!validateEmail(email)) {
-						showFieldError('email', 'Enter a valid email (e.g., name@domain.com)');
+						showFieldError('email', 'Enter valid email');
 						isValid = false;
 					}
 
@@ -2451,7 +2431,7 @@
 						showFieldError('phone', 'Phone number is required');
 						isValid = false;
 					} else if (!validatePhone(phone)) {
-						showFieldError('phone', 'Exactly 10 digits, no spaces');
+						showFieldError('phone', 'Exactly 10 digits');
 						isValid = false;
 					}
 
@@ -2461,79 +2441,62 @@
 					}
 
 					if (!isValid) {
-						showToast('Please correct the errors above', 'error');
+						showToast('Please correct highlighted fields', 'error');
 						return;
 					}
 
-					// honeypot check (hidden field, bots fill it)
+					// Honeypot anti-spam
 					const honeypot = form.querySelector('input[name="_gotcha"]');
 					if (honeypot && honeypot.value !== '') {
-						// silent fail – pretend success, but do not send
-						showToast('✅ Message sent (anti-spam)', 'success');
+						showToast('Message sent', 'success');
 						form.reset();
 						return;
 					}
 
-					// prepare FormData for AJAX
-					const formData = new FormData(form);
+					submitBtn.classList.add('ps-btn-loading');
+					submitBtn.disabled = true;
 
-					// Add hidden subject again (already present in hidden)
-					// disable default Formspree reload
-					try {
-						submitBtn.classList.add('ps-btn-loading');
-						submitBtn.disabled = true;
+					const whatsappNumber = "919081315111"; // Change if needed
 
-						const response = await fetch(FORMSPREE_URL, {
-							method: 'POST',
-							body: formData,
-							headers: { 'Accept': 'application/json' }
-						});
+					const whatsappMessage =
+						`New Site Assessment Request
 
-						if (response.ok) {
-							showToast('✅ Your request has been delivered!', 'success');
-							form.reset();
-						} else {
-							const data = await response.json();
-							if (data.error) {
-								showToast(`❌ ${data.error}`, 'error');
-							} else {
-								showToast('❌ Submission failed. Please try later.', 'error');
-							}
-						}
-					} catch (error) {
-						showToast('❌ Network error. Check connection.', 'error');
-					} finally {
+	Name: ${fullname}
+	Email: ${email}
+	Phone: ${phone}
+	Inquiry: ${inquiry}
+	Message: ${message}`;
+
+					const encodedMessage = encodeURIComponent(whatsappMessage);
+					const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+					showToast('Opening WhatsApp. Please tap Send to confirm your request.', 'success');
+
+					setTimeout(() => {
+						window.location.href = whatsappURL;
+					}, 900);
+
+					setTimeout(() => {
 						submitBtn.classList.remove('ps-btn-loading');
 						submitBtn.disabled = false;
-					}
+					}, 1200);
 				}
 
-				// attach event
 				form.addEventListener('submit', handleFormSubmit);
 
-				// live remove error on input
+				// Live remove error on typing
 				['fullname', 'email', 'phone', 'message'].forEach(id => {
 					const input = document.getElementById(id);
 					if (input) {
 						input.addEventListener('input', function () {
 							clearFieldError(id);
-							this.classList.remove('ps-input-error');
 						});
-					}
-				});
-
-				// manual progress bar reset after hide
-				const toast = document.getElementById('ps-toast');
-				toast.addEventListener('transitionend', function (e) {
-					if (!toast.classList.contains('ps-toast-visible')) {
-						const progressBar = toast.querySelector('.ps-toast-progress');
-						progressBar.style.transition = 'none';
-						progressBar.style.width = '100%';
 					}
 				});
 
 			})();
 		</script>
+
 
 		<style>
 			/* ----- GLOBAL RESET / mobile-first, PERFECT SAFETY industrial premium ----- */
@@ -2971,27 +2934,26 @@
 	<footer class="ftco-footer">
 		<div class="container mb-5 pb-4">
 			<div class="row">
-<div class="col-lg col-md-6">
-  <div class="ftco-footer-widget">
+				<div class="col-lg col-md-6">
+					<div class="ftco-footer-widget">
 
-    <!-- Logo + Heading Row -->
-    <div class="d-flex align-items-center mb-3 footer-about-header">
-      <a href="/" class="footer-logo mr-3">
-        <img src="img/partners/Picture1.png" 
-             alt="Perfect Safety Logo">
-      </a>
-      <h2 class="ftco-heading-2 mb-0">
-        About Us
-      </h2>
-    </div>
+						<!-- Logo + Heading Row -->
+						<div class="d-flex align-items-center mb-3 footer-about-header">
+							<a href="/" class="footer-logo mr-3">
+								<img src="img/partners/Picture1.png" alt="Perfect Safety Logo">
+							</a>
+							<h2 class="ftco-heading-2 mb-0">
+								About Us
+							</h2>
+						</div>
 
-    <p>
-      Delivering certified industrial safety, fire protection,
-      and EHS solutions to build safer and compliant workplaces.
-    </p>
+						<p>
+							Delivering certified industrial safety, fire protection,
+							and EHS solutions to build safer and compliant workplaces.
+						</p>
 
-  </div>
-</div>
+					</div>
+				</div>
 
 
 
@@ -3052,31 +3014,31 @@
 							Copyright &copy;
 							<script>document.write(new Date().getFullYear());</script> PERFECT SAFETY All rights
 							reserved <br> Industrial Safety | Fire Protection | EHS Consulting
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
+						<p style="font-size: 11px;">Developed by <a href="https://ekotechsolution.com/">EKOTECH SOLUTIONS</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 	<style>
-.footer-logo img {
-  max-width: 40px;  /* controlled size */
-  height: auto;
-  border-radius: 10px;
-}
+		.footer-logo img {
+			max-width: 40px;
+			/* controlled size */
+			height: auto;
+			border-radius: 10px;
+		}
 
-.footer-about-header h2 {
-  font-size: 18px;
-  font-weight: 600;
-}
+		.footer-about-header h2 {
+			font-size: 18px;
+			font-weight: 600;
+		}
 
-@media (max-width: 576px) {
-  .footer-logo img {
-    max-width: 50px;
-  }
-}
-
+		@media (max-width: 576px) {
+			.footer-logo img {
+				max-width: 50px;
+			}
+		}
 	</style>
 
 	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
